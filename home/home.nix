@@ -9,7 +9,7 @@
         inputs.nixvim.homeManagerModules.nixvim
     ];
 
-
+    programs.git.enable = true;
 
     home.username = "mukeshkannan";
     home.homeDirectory = "/Users/mukeshkannan";

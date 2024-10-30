@@ -39,8 +39,7 @@
      app_name=$(basename "$src")
      echo "copying $src" >&2
      ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
-   done
-       '';
+   done '';
 
   services.nix-daemon.enable = true;
   nix.settings.experimental-features = "nix-command flakes";

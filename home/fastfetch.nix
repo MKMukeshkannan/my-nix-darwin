@@ -1,4 +1,5 @@
 {
+    programs.git.enable = true;
     programs.fastfetch = {
         enable = true;
         settings = {

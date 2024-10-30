@@ -1,5 +1,5 @@
 {
-  description = "Example Darwin system flake";
+  description = "MY MACOS SETUP";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -26,6 +26,7 @@
             home-manager.extraSpecialArgs = {inherit inputs;};
             home-manager.users.mukeshkannan = import ./home/home.nix;
         }
+
       ];
     };
 
