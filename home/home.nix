@@ -1,21 +1,20 @@
 { inputs, config, pkgs, ... }:
-
 {
-    imports = [ 
-        ./fastfetch.nix
-        ./kitty.nix
-        ./zsh.nix
-        ./neovim
-        inputs.nixvim.homeManagerModules.nixvim
-    ];
+  imports = [ 
+    ./fastfetch.nix
+    ./kitty.nix
+    ./zsh.nix
+    ./neovim
+    inputs.nixvim.homeManagerModules.nixvim
+  ];
 
-    programs.git.enable = true;
+  programs.git.enable = true;
 
-    home.username = "mukeshkannan";
-    home.homeDirectory = "/Users/mukeshkannan";
+  home.username = "mukeshkannan";
+  home.homeDirectory = "/Users/mukeshkannan";
 
 
-    home.stateVersion = "24.05";
+  home.stateVersion = "24.05";
 
-    programs.home-manager.enable = true;
+  programs.home-manager.enable = true;
 }
