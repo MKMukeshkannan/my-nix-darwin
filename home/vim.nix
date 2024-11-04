@@ -14,6 +14,8 @@
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
     
     syntax on
+
+    set foldmethod=marker
     set number
     set cursorline
     set shiftwidth=2
