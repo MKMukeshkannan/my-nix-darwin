@@ -26,8 +26,6 @@
     set history=1000
     set encoding=UTF-8
     set guifont=MesloLGS\ NF\ Regular
-    set transparency=0
-    set blurradius=50
     set incsearch
     set rnu
     set autoread
@@ -36,31 +34,9 @@
     "  SOMETHING TO DO WITH BUFFERS
     set hidden
     
-    let g:jellybeans_overrides = {
-    \    'background': { 'guibg': 'none' },
-    \}
-    
-    let g:PaperColor_Theme_Options = {
-    	\   'language': {
-      \     'cpp': {
-      \       'highlight_standard_library': 1
-      \     },
-      \     'c': {
-      \       'highlight_builtins' : 1
-      \     }
-      \   },
-      \   'theme': {
-      \     'default': {
-      \       'transparent_background': 1
-      \     }
-      \   }
-      \ }
-    
     let mapleader = " "
     set t_Co=256
-    set background=dark
-    colorscheme PaperColor
-    
+
     " PLUGINS  ------------------------------------------------------------ {{{
     
     call plug#begin('~/.vim/plugged')

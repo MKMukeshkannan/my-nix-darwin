@@ -4,6 +4,7 @@
     ./fastfetch.nix
     ./kitty.nix
     ./zsh.nix
+    ./vim.nix
     ./neovim
     inputs.nixvim.homeManagerModules.nixvim
   ];
