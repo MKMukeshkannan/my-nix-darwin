@@ -9,6 +9,7 @@
   ];
 
   programs.git.enable = true;
+  programs.vim.enable = true;
 
   home.username = "mukeshkannan";
   home.homeDirectory = "/Users/mukeshkannan";

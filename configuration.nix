@@ -4,8 +4,8 @@
     imports = [ ./darwin/yabai.nix  ./darwin/skhd.nix ];
 
     environment.systemPackages = [ 
-        pkgs.vim 
         pkgs.mkalias
+        (import ./scripts/xforce.nix { inherit pkgs; })
     ];
 
     fonts.packages = [
