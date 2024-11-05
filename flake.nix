@@ -14,17 +14,9 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
-    homebrew-core = {
-      url = "github:homebrew/homebrew-core";
-      flake = false;
-    };
-    homebrew-cask = {
-      url = "github:homebrew/homebrew-cask";
-      flake = false;
-    };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nixvim, home-manager, nix-homebrew, homebrew-core, homebrew-cask, ... }: {
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nixvim, home-manager, nix-homebrew, ... }: {
     darwinConfigurations."mkmac" = nix-darwin.lib.darwinSystem {
       modules = [ 
       	./configuration.nix
@@ -41,11 +33,6 @@
             enable = true;
             enableRosetta = true;
             user = "mukeshkannan";
-            taps = {
-              "homebrew/homebrew-core" = homebrew-core;
-              "homebrew/homebrew-cask" = homebrew-cask;
-            };
-            mutableTaps = false;
           };
         }
 
