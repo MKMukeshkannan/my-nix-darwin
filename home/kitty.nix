@@ -7,9 +7,9 @@
         };
         # themeFile = "flexoki_light";
         extraConfig = ''
-	    hide_window_decorations yes 
+	          hide_window_decorations yes 
 
-            background            #fff
+            background            #a0a0a0
             foreground            #000
             cursor                #000
             cursor_text_color     #000
@@ -57,8 +57,8 @@
             color15 #545454
 
             # dim_opacity                0.4
-            background_opacity         0.0
-            background_blur            40
+            background_opacity         0.3
+            background_blur            50
 
             window_padding_width 20
             '';
