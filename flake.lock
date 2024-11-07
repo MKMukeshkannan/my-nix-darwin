@@ -460,11 +460,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-nIchXohV47LzQe9IQQny0iyKmzbra0OUyPD+8zkY940=",
-        "path": "/nix/store/pnlif6i5m8n0cvyr6zk03r463zlxjwwc-source/yabikd",
+        "path": "/nix/store/aw9mv2wl792lp7ga5mzxbdappgmpzxl8-source/yabikd",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/pnlif6i5m8n0cvyr6zk03r463zlxjwwc-source/yabikd",
+        "path": "/nix/store/aw9mv2wl792lp7ga5mzxbdappgmpzxl8-source/yabikd",
         "type": "path"
       }
     }
