@@ -327,6 +327,21 @@
         "type": "github"
       }
     },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1730914863,
+        "narHash": "sha256-kOAok3imaFaor4jCFcpM16h/epnhsMp1TbzGfRF2xfk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "7cf19f381114cfbd5f1347848efcbf34aec73066",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixvim": {
       "inputs": {
         "devshell": "devshell",
@@ -383,7 +398,8 @@
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
         "nixpkgs": "nixpkgs_3",
-        "nixvim": "nixvim"
+        "nixvim": "nixvim",
+        "yabaikd": "yabaikd"
       }
     },
     "systems": {
@@ -435,6 +451,21 @@
         "owner": "numtide",
         "repo": "treefmt-nix",
         "type": "github"
+      }
+    },
+    "yabaikd": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-nIchXohV47LzQe9IQQny0iyKmzbra0OUyPD+8zkY940=",
+        "path": "/nix/store/pnlif6i5m8n0cvyr6zk03r463zlxjwwc-source/yabikd",
+        "type": "path"
+      },
+      "original": {
+        "path": "/nix/store/pnlif6i5m8n0cvyr6zk03r463zlxjwwc-source/yabikd",
+        "type": "path"
       }
     }
   },

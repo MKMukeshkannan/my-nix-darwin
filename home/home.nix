@@ -10,6 +10,10 @@
   ];
 
   programs.git.enable = true;
+  programs.git = {
+    userName = "M K Mukesh Kannan";
+    userEmail = "mukeshkannan311@gmail.com";
+  };
   programs.vim.enable = true;
 
   home.username = "mukeshkannan";

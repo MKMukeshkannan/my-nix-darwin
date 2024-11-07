@@ -2,6 +2,7 @@
   description = "MY MACOS SETUP";
 
   inputs = {
+    yabaikd.url = "./yabikd";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     nix-darwin.url = "github:LnL7/nix-darwin";
