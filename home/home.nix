@@ -6,6 +6,9 @@
     ./zsh.nix
     ./vim.nix
     ./neovim
+
+    ./yabai.nix
+    ./skhd.nix
     inputs.nixvim.homeManagerModules.nixvim
   ];
 
