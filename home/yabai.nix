@@ -1,5 +1,8 @@
 {
   home.file.".config/yabai/yabairc".text = ''
+    yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+    sudo yabai --load-sa
+
     yabai -m config layout bsp
     
     yabai -m config window_placement second_child

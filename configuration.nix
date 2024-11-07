@@ -11,7 +11,7 @@
 
   homebrew = { 
     enable = true;
-    casks = [ "iina" "arc" ];
+    casks = [ "iina" "arc" "raycast" ];
   };
 
   fonts.packages = [
