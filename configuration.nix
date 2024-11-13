@@ -6,12 +6,14 @@
     pkgs.skhd
     pkgs.kitty
     pkgs.mkalias
+    pkgs.ripgrep
     (import ./scripts/xforce.nix { inherit pkgs; })
   ];
+  environment.shells = [ pkgs.zsh ];
 
   homebrew = { 
     enable = true;
-    casks = [ "iina" "arc" "raycast" ];
+    casks = [ "iina" "arc" "raycast" "obsidian"];
   };
 
   fonts.packages = [

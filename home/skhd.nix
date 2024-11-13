@@ -28,10 +28,10 @@
     shift + alt - 0 : yabai -m window --space 10
     
     # MOVES FOCUS BETWEEN WINDOWS IN THE CURRENT FOCUSED DISPLAY
-    alt - h : yabai -m window --focus west
+    alt - h : yabai -m window --focus west || yabai -m display --focus west
     alt - j : yabai -m window --focus south
     alt - k : yabai -m window --focus north
-    alt - l : yabai -m window --focus east
+    alt - l : yabai -m window --focus east || yabai -m display --focus east 
     
     # MOVES FOCUS BETWEEN SPACES 
     alt - 1 : yabai -m space --focus 1
@@ -44,7 +44,8 @@
     alt - 8 : yabai -m space --focus 8
     alt - 9 : yabai -m space --focus 9
     alt - 0  : yabai -m space --focus 10
-    
+
+
     alt - q : yabai -m space --destroy
     alt - e : yabai -m window --toggle split
     alt - x : yabai -m window --close

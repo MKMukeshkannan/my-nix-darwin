@@ -6,11 +6,13 @@
     ./zsh.nix
     ./vim.nix
     ./neovim
-
+    ./tmux.nix
     ./yabai.nix
     ./skhd.nix
     inputs.nixvim.homeManagerModules.nixvim
   ];
+
+  home.packages = with pkgs; [ zsh ];
 
   programs.git.enable = true;
   programs.git = {

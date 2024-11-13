@@ -8,5 +8,6 @@
     ./keymaps.nix
     ./dashboard.nix
     ./telescope.nix
+    ./nvim-surrond.nix
   ];
 }

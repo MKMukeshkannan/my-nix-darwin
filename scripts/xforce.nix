@@ -1,12 +1,12 @@
 { pkgs }: (pkgs.writeShellApplication {
   name = "tpcp";
   text = ''
-    if [ -f "$HOME/template.cpp" ]; then
-        cp "$HOME/template.cpp" "./template.cpp"
-        echo "Copied template.cpp from home directory"
-    else
-        echo "No template.cpp found in home directory"
-    fi
+    # if [ -f "$HOME/template.cpp" ]; then
+    #     cp "$HOME/template.cpp" "./template.cpp"
+    #     echo "Copied template.cpp from home directory"
+    # else
+    #     echo "No template.cpp found in home directory"
+    # fi
     
     # Check and create each file individually
     if [ ! -f "main.cpp" ]; then

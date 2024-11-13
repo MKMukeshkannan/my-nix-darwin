@@ -40,6 +40,10 @@
                 action = "find_files";
                 options.desc = "Find project files";
             };
+            "<leader>fg" = {
+                action = "live_grep";
+                options.desc = "Find grep";
+            };
             "<leader>fr" = {
                 action = "oldfiles";
                 options.desc = "Recent";
