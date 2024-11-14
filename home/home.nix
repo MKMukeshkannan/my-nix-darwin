@@ -12,7 +12,7 @@
     inputs.nixvim.homeManagerModules.nixvim
   ];
 
-  home.packages = with pkgs; [ zsh ];
+  home.packages = with pkgs; [ zsh tmuxinator ];
 
   programs.git.enable = true;
   programs.git = {
