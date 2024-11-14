@@ -9,5 +9,6 @@
     ./dashboard.nix
     ./telescope.nix
     ./nvim-surrond.nix
+    ./tmux-navigator.nix
   ];
 }

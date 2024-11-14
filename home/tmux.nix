@@ -11,13 +11,15 @@
 
     shell = "${pkgs.zsh}/bin/zsh";
 
-     plugins = with pkgs;
+     plugins = with pkgs.tmuxPlugins;
      [
+       vim-tmux-navigator
        {
-         plugin = tmuxPlugins.catppuccin;
+         plugin = catppuccin;
          extraConfig = '' 
-           set -g @catppuccin_flavour 'frappe'
+           set -g @catppuccin_flavour 'latte'
            set -g @catppuccin_window_tabs_enabled on
+           set -g @catppuccin_window_current_number_color "#{@thm_lavender}"
            set -g @catppuccin_date_time "%H:%M"
            '';
        }

@@ -5,9 +5,34 @@
         key = "<leader>fd";
         options = { silent = true; };
       }
+      {
+        action = ":wincmd k<CR>";
+        key = "<c-k>";
+        options = { silent = true; };
+      }
+      {
+        action = ":wincmd j<CR>";
+        key = "<c-j>";
+        options = { silent = true; };
+      }
+      {
+        action = ":wincmd h<CR>";
+        key = "<c-h>";
+        options = { silent = true; };
+      }
+      {
+        action = ":wincmd l<CR>";
+        key = "<c-l>";
+        options = { silent = true; };
+      }
+
     ];
 }
 
+# nmap <silent> <c-k> :wincmd k<CR>
+# nmap <silent> <c-j> :wincmd j<CR>
+# nmap <silent> <c-h> :wincmd h<CR>
+# nmap <silent> <c-l> :wincmd l<CR>
 # vim.api.nvim_set_keymap('i', '<Esc>', [[pumvisible() ? "\<C-e><Esc>" : "\<Esc>"]], { expr = true, silent = true })
 # vim.api.nvim_set_keymap('i', '<C-c>', [[pumvisible() ? "\<C-e><C-c>" : "\<C-c>"]], { expr = true, silent = true })
 # vim.api.nvim_set_keymap('i', '<BS>', [[pumvisible() ? "\<C-e><BS>" : "\<BS>"]], { expr = true, silent = true })
