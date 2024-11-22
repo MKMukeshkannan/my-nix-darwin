@@ -31,6 +31,23 @@
     };
   };
 
+ 
+  
+  system.defaults = {
+    dock.autohide  = true;
+    dock.persistent-apps = [
+      "${pkgs.kitty}/Applications/Kitty.app"
+      "${pkgs.obsidian}/Applications/Obsidian.app"
+    ];
+    finder.FXPreferredViewStyle = "clmv";
+    loginwindow.GuestEnabled  = false;
+    NSGlobalDomain.AppleICUForce24HourTime = true;
+    NSGlobalDomain.AppleInterfaceStyle = "Dark";
+    NSGlobalDomain.KeyRepeat = 2;
+    NSGlobalDomain.AppleShowAllExtensions = true;
+    NSGlobalDomain._HIHideMenuBar = true;
+  };
+
   system.activationScripts.applications.text = let
     env = pkgs.buildEnv {
       name = "system-applications";
