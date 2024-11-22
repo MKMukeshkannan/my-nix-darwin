@@ -5,6 +5,12 @@
         servers = {
             clangd.enable = true;
             ts_ls.enable = true;
+            tailwindcss.enable = true;
+            rust_analyzer = {
+              enable = true;
+              installCargo = true;
+              installRustc = true;
+            };
         };
         keymaps = {
           silent = true;

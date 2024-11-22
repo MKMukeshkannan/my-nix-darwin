@@ -10,5 +10,6 @@
     ./telescope.nix
     ./nvim-surrond.nix
     ./tmux-navigator.nix
+    ./treesitter.nix
   ];
 }

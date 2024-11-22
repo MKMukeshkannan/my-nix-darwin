@@ -7,7 +7,7 @@
             auto_start = true;
             keymap.recommended = false;
             keymap.bigger_preview = "<C-p";
-            keymap.jump_to_mark = "<c-;>";
+            keymap.jump_to_mark = "<c-a>";
         };
         luaConfig.post = ''
             vim.api.nvim_set_keymap('i', '<Esc>', [[pumvisible() ? "\<C-e><Esc>" : "\<Esc>"]], { expr = true, silent = true })

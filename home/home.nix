@@ -12,7 +12,7 @@
     inputs.nixvim.homeManagerModules.nixvim
   ];
 
-  home.packages = with pkgs; [ zsh tmuxinator ];
+  home.packages = with pkgs; [ zsh tmuxinator zoxide ];
 
   programs.git.enable = true;
   programs.git = {
@@ -20,6 +20,7 @@
     userEmail = "mukeshkannan311@gmail.com";
   };
   programs.vim.enable = true;
+  programs.zoxide.enable = true;
 
   home.username = "mukeshkannan";
   home.homeDirectory = "/Users/mukeshkannan";
