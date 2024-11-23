@@ -25,10 +25,16 @@
         key = "<c-l>";
         options = { silent = true; };
       }
+      {
+        action = ":lua vim.lsp.buf.format({})<CR>";
+        key = "<leader>fj";
+        options = { silent = true; };
+      }
 
     ];
 }
 
+#vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 # nmap <silent> <c-k> :wincmd k<CR>
 # nmap <silent> <c-j> :wincmd j<CR>
 # nmap <silent> <c-h> :wincmd h<CR>

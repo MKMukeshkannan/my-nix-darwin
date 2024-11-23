@@ -32,22 +32,20 @@
     set rnu
     set autoread
     set splitright
-    
-    "  SOMETHING TO DO WITH BUFFERS
     set hidden
-    
     let mapleader = " "
-    set t_Co=256
 
     " PLUGINS  ------------------------------------------------------------ {{{
     
     call plug#begin('~/.vim/plugged')
     
+    Plug 'sainnhe/everforest'
     Plug 'preservim/nerdtree'
     Plug 'ryanoasis/vim-devicons'
     Plug 'PhilRunninger/nerdtree-visual-selection'
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
+
     
     let g:UltiSnipsExpandTrigger="<tab>"
     let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -97,9 +95,26 @@
     nnoremap <leader>f :source ~/.vimrc <CR>
     nnoremap <leader><leader>w :vnew input.txt <CR> :new output.txt
     " }}}
+
+
+    " COLOR SCHEME ----------------------------------------------------------- {{{
+
+    set background=dark
+    let g:everforest_background = 'hard'
+    let g:everforest_better_performance = 1
+    let g:everforest_transparent_background = 1
+    let g:everforest_cursor = 'purple'
+    let g:everforest_show_eob = '0'
+    set t_Co=256
+
+    colorscheme everforest
+
+    " }}}
+
     
     " STATUS LINE ------------------------------------------------------------ {{{
     
+
     set statusline=
     set statusline+=\ %F\ %M\ %Y\ %R
     set statusline+=%=

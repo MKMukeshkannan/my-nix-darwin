@@ -11,5 +11,6 @@
     ./nvim-surrond.nix
     ./tmux-navigator.nix
     ./treesitter.nix
+    ./lsp/none-ls.nix
   ];
 }
