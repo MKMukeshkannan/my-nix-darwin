@@ -27,6 +27,7 @@
             source ~/.p10k.zsh
             fastfetch
             export CPLUS_INCLUDE_PATH=/Users/mukeshkannan/cpp_stuff
+            # bindkey -s ^f "muxses\n"
         '';
         shellAliases = {cvim = "vim -c ':vsplit input.txt' -c ':split output.txt' -c ':vertical resize 40' ./main.cpp";};
     };

@@ -2,18 +2,23 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = [ 
+    pkgs.ninja
+    pkgs.cmake
+    pkgs.gnumake
     pkgs.yabai
     pkgs.skhd
     pkgs.kitty
     pkgs.mkalias
     pkgs.ripgrep
     (import ./scripts/xforce.nix { inherit pkgs; })
+    (import ./scripts/muxses.nix { inherit pkgs; })
   ];
   environment.shells = [ pkgs.zsh ];
 
   homebrew = { 
     enable = true;
-    casks = [ "iina" "arc" "raycast" "obsidian"];
+    casks = [ "iina" "arc" "raycast" "obsidian" "postman" ];
+    brews = [ "node@22" ];
   };
 
   fonts.packages = [

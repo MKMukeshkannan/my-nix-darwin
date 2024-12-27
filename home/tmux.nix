@@ -8,31 +8,35 @@
     terminal = "tmux-256color";
     sensibleOnTop = false;
 
-
     shell = "${pkgs.zsh}/bin/zsh";
 
-     plugins = with pkgs.tmuxPlugins;
-     [
-       vim-tmux-navigator
-       {
-         plugin = catppuccin;
-         extraConfig = '' 
-           set -g @catppuccin_flavour 'frappe'
-           set -g @catppuccin_window_tabs_enabled on
-           set -g @catppuccin_window_current_number_color "#{@thm_lavender}"
-           set -g @catppuccin_date_time "%H:%M"
-           '';
-       }
-     ];
-      extraConfig = ''
-        set -g mouse on
+    plugins = with pkgs.tmuxPlugins;
+    [
+      vim-tmux-navigator
+      {
+        plugin = catppuccin;
+        extraConfig = '' 
+          set -g @catppuccin_flavour 'frappe'
+          set -g @catppuccin_window_tabs_enabled on
+          set -g @catppuccin_window_current_number_color "#{@thm_lavender}"
+          set -g @catppuccin_date_time "%H:%M"
+          '';
+      }
+    ];
+    extraConfig = ''
+      set -g mouse on
 
-        unbind %
-        unbind '"'
-        bind | split-window -h -c "#{pane_current_path}"
-        bind - split-window -v -c "#{pane_current_path}"
+      unbind %
+      unbind '"'
+      bind | split-window -h -c "#{pane_current_path}"
+      bind - split-window -v -c "#{pane_current_path}"
 
-        bind r source-file ~/.config/tmux/tmux.conf
+      bind c new-window -c "#{pane_current_path}"
+      bind r source-file ~/.config/tmux/tmux.conf
+
+      bind -n C-Space run-shell "tmux neww muxses"
+
+      set-option -g detach-on-destroy off
     '';
   };
 }

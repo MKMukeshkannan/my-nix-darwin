@@ -1,6 +1,14 @@
 {
     programs.nixvim.keymaps = [
       {
+        action = "<cmd>:ObsidianNew<CR>";
+        key = "<leader>nn";
+      }
+      {
+        action = ":ObsidianPasteImg<CR>";
+        key = "<leader>v"; 
+      }
+      {
         action = "<cmd>:Neotree toggle<CR>";
         key = "<leader>fd";
         options = { silent = true; };
@@ -30,9 +38,22 @@
         key = "<leader>fj";
         options = { silent = true; };
       }
-
+      {
+        action = ''"+y'';
+        key = "<leader>y";
+      }
+      {
+        action = ''"+y'';
+        key = "<leader>y";
+      }
     ];
 }
+
+
+# vim.keymap.set("x", "<leader>p", '"_dp')
+# vim.keymap.set("n", "<leader>y", '"+y')
+# vim.keymap.set("v", "<leader>y", '"+y')
+# vim.keymap.set("n", "<leader>Y", '"+Y')
 
 #vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 # nmap <silent> <c-k> :wincmd k<CR>

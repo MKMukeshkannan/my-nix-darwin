@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }:
+{ inputs, config, pkgs, ... }: 
 {
   imports = [ 
     ./fastfetch.nix
@@ -12,8 +12,7 @@
     inputs.nixvim.homeManagerModules.nixvim
   ];
 
-  home.packages = with pkgs; [ zsh tmuxinator zoxide ];
-
+  home.packages = with pkgs; [ zsh tmuxinator zoxide lazygit yarn nodejs_22 fzf pngpaste yazi tidy-viewer ];
   programs.git.enable = true;
   programs.git = {
     userName = "M K Mukesh Kannan";
