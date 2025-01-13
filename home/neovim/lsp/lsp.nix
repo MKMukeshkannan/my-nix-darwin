@@ -12,6 +12,8 @@
               installRustc = true;
             };
             cmake.enable = true;
+            # nixd.enable = true;
+            nil_ls.enable = true;
         };
         keymaps = {
           silent = true;
