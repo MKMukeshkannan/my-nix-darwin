@@ -11,6 +11,7 @@
               installCargo = true;
               installRustc = true;
             };
+            cmake.enable = true;
         };
         keymaps = {
           silent = true;

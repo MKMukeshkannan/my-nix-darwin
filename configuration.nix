@@ -10,8 +10,10 @@
     pkgs.kitty
     pkgs.mkalias
     pkgs.ripgrep
+    pkgs.wget
     (import ./scripts/xforce.nix { inherit pkgs; })
     (import ./scripts/muxses.nix { inherit pkgs; })
+    (import ./scripts/cses_folder.nix { inherit pkgs; })
   ];
   environment.shells = [ pkgs.zsh ];
 

@@ -26,6 +26,7 @@
     yabai -m rule --add app="^Calculator$" manage=off
     yabai -m rule --add app="^Karabiner-Elements$" manage=off
     yabai -m rule --add app="^QuickTime Player$" manage=off
+    yabai -m rule --add app="^ruin$" manage=off
     
     echo "yabai configuration loaded . . . 🎯 "
   '';

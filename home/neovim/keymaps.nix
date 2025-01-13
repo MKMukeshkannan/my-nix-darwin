@@ -1,6 +1,14 @@
 {
     programs.nixvim.keymaps = [
       {
+        action = "<cmd>:!command cmake -S . -B build && cmake --build build<CR>";
+        key = "<leader>c";
+      }
+      {
+        action = "<cmd>:!command ./build/bin/ruin<CR>";
+        key = "<leader>r";
+      }
+      {
         action = "<cmd>:ObsidianNew<CR>";
         key = "<leader>nn";
       }

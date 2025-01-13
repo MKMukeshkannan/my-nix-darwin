@@ -34,7 +34,10 @@
       bind c new-window -c "#{pane_current_path}"
       bind r source-file ~/.config/tmux/tmux.conf
 
+      unbind -n L
+
       bind -n C-Space run-shell "tmux neww muxses"
+      bind -n C-x switch-client -l 
 
       set-option -g detach-on-destroy off
     '';
