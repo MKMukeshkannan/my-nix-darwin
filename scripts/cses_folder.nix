@@ -28,6 +28,5 @@ else
   echo $current_dir
   echo "Current folder does not match the expected pattern '[ ] - something'."
 fi
-
 ''
 

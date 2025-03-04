@@ -13,15 +13,6 @@
     plugins = with pkgs.tmuxPlugins;
     [
       vim-tmux-navigator
-      {
-        plugin = catppuccin;
-        extraConfig = '' 
-          set -g @catppuccin_flavour 'frappe'
-          set -g @catppuccin_window_tabs_enabled on
-          set -g @catppuccin_window_current_number_color "#{@thm_lavender}"
-          set -g @catppuccin_date_time "%H:%M"
-          '';
-      }
     ];
     extraConfig = ''
       set -g mouse on
@@ -40,6 +31,23 @@
       bind -n C-x switch-client -l 
 
       set-option -g detach-on-destroy off
+
+
+      set-option -g status-position bottom
+      set-option -g status-style bg=black,fg=white
+      set-option -g automatic-rename on
+       
+      set-option -g status-left-length 20
+      set-option -g status-left '#[fg=white]#(echo " Session: ")#[fg=brightgreen]#{session_name}'
+       
+      set-option -g status-justify centre
+       
+      set-option -g status-right '#[fg=brightgreen]#(date "+%H:%M ")#[fg=white]#(echo " | ")#[fg=purple]#(nowplaying-cli get title)'
+       
+      set-option -g status-interval 1
+       
+      set-option -g window-status-format '#{window_index}#(echo " ")#{window_name}#{window_flags}'
+      set-option -g window-status-current-format '#[bold,fg=white,bg=purple]#(echo " ")#{window_index}#(echo " ")#{window_name}#(echo " ")#[fg=black,bg=cyan]#(echo " ")#{window_flags}#(echo " ")'
     '';
   };
 }

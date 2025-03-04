@@ -161,6 +161,21 @@
         "type": "github"
       }
     },
+    "haskell-flake": {
+      "locked": {
+        "lastModified": 1737295229,
+        "narHash": "sha256-dxbNI7l5nU5q/bXKdxiPQViH4pQCsjVIU385JgV1K0w=",
+        "owner": "srid",
+        "repo": "haskell-flake",
+        "rev": "80b240753783b66a8a415d250af0ebc56d2fbd71",
+        "type": "github"
+      },
+      "original": {
+        "owner": "srid",
+        "repo": "haskell-flake",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -379,6 +394,7 @@
     },
     "root": {
       "inputs": {
+        "haskell-flake": "haskell-flake",
         "home-manager": "home-manager",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",

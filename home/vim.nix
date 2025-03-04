@@ -35,11 +35,12 @@
     set hidden
     let mapleader = " "
 
+
     " PLUGINS  ------------------------------------------------------------ {{{
     
     call plug#begin('~/.vim/plugged')
     
-    Plug 'sainnhe/everforest'
+    Plug 'morhetz/gruvbox'
     Plug 'preservim/nerdtree'
     Plug 'ryanoasis/vim-devicons'
     Plug 'PhilRunninger/nerdtree-visual-selection'
@@ -99,15 +100,20 @@
 
     " COLOR SCHEME ----------------------------------------------------------- {{{
 
-    set background=dark
-    let g:everforest_background = 'hard'
-    let g:everforest_better_performance = 1
-    let g:everforest_transparent_background = 1
-    let g:everforest_cursor = 'purple'
-    let g:everforest_show_eob = '0'
+    set background=light
+    hi Normal guibg=NONE ctermbg=NONE
+
+    " let g:everforest_background = 'hard'
+    " let g:everforest_better_performance = 1
+    " let g:everforest_transparent_background = 1
+    " let g:everforest_cursor = 'purple'
+    " let g:everforest_show_eob = '0'
     set t_Co=256
 
-    colorscheme everforest
+    let g:gruvbox_italic=1
+    let g:gruvbox_transparent_bg=0
+
+    colorscheme gruvbox 
 
     " }}}
 

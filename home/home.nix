@@ -1,10 +1,10 @@
-{ inputs, config, pkgs, ... }: 
+{ inputs, pkgs, ... }: 
 {
   imports = [ 
     ./fastfetch.nix
+    ./vim.nix
     ./kitty.nix
     ./zsh.nix
-    ./vim.nix
     ./neovim
     ./tmux.nix
     ./yabai.nix
@@ -18,7 +18,6 @@
     userName = "M K Mukesh Kannan";
     userEmail = "mukeshkannan311@gmail.com";
   };
-  programs.vim.enable = true;
   programs.zoxide.enable = true;
 
   home.username = "mukeshkannan";

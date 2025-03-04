@@ -5,7 +5,7 @@
         settings = {
             logo = {
                 type = "kitty-direct";
-                source= "~/NIXCONFIG/wallpapars/jimi.png";
+                source= "~/Downloads/jimi.png";
                 height= 12;
                 width= 24;
             };

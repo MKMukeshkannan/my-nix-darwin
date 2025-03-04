@@ -8,6 +8,7 @@
         number = true; 
 
 
+        background="light";
 
         modeline = true; 
         modelines = 100; 

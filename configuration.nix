@@ -3,7 +3,6 @@
 
   environment.systemPackages = [ 
     pkgs.ninja
-    pkgs.cmake
     pkgs.gnumake
     pkgs.yabai
     pkgs.skhd
@@ -13,14 +12,43 @@
     pkgs.wget
     (import ./scripts/xforce.nix { inherit pkgs; })
     (import ./scripts/muxses.nix { inherit pkgs; })
+    (import ./scripts/mcd.nix { inherit pkgs; })
     (import ./scripts/cses_folder.nix { inherit pkgs; })
+
+    (pkgs.stdenv.mkDerivation {
+      name = "nowplaying-cli";
+      pname = "nowplaying-cli";
+      src = pkgs.fetchFromGitHub {
+        owner = "kirtan-shah";
+        repo = "nowplaying-cli";
+        rev = "v1.2.1";
+        sha256 = "sha256-FkyrtgsGzpK2rLNr+oxfPUbX43TVXYeiBg7CN1JUg8Y=";
+      };
+
+      buildInputs = with pkgs; [
+        darwin.apple_sdk.frameworks.Foundation
+        darwin.apple_sdk.frameworks.Cocoa
+        gnumake
+        gcc
+      ];
+
+      buildPhase = ''
+        make
+      '';
+
+      installPhase = ''
+        mkdir -p $out/bin
+        cp nowplaying-cli $out/bin/
+      '';
+    })
+
   ];
   environment.shells = [ pkgs.zsh ];
 
   homebrew = { 
     enable = true;
-    casks = [ "iina" "arc" "raycast" "obsidian" "postman" ];
-    brews = [ "node@22" ];
+    casks = [ "iina" "arc" "raycast" "obsidian" "postman" "wezterm" ];
+    brews = [ "node@22"  ];
   };
 
   fonts.packages = [

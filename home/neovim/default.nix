@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{...}: {
   imports = [
     ./lsp
     ./ui
@@ -14,6 +14,9 @@
     ./nvim-surrond.nix
     ./tmux-navigator.nix
     ./indent-blankline.nix
+    ./align.nix
+    ./harpoon.nix
+    # ./typr.nix
   ];
 
   programs.nixvim.extraConfigLua = ''vim.opt.conceallevel = 1'';

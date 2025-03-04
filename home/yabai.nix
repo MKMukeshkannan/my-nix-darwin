@@ -27,6 +27,9 @@
     yabai -m rule --add app="^Karabiner-Elements$" manage=off
     yabai -m rule --add app="^QuickTime Player$" manage=off
     yabai -m rule --add app="^ruin$" manage=off
+    yabai -m rule --add app="^RUIN.*$" manage=off
+    yabai -m rule --add app="^ruin-opengl-example$" manage=off
+    yabai -m rule --add title="^RUIN.*$" manage=off
     
     echo "yabai configuration loaded . . . 🎯 "
   '';
