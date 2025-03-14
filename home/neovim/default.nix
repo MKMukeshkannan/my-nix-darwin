@@ -16,6 +16,7 @@
     ./indent-blankline.nix
     ./align.nix
     ./harpoon.nix
+    ./lualine.nix
     # ./typr.nix
   ];
 

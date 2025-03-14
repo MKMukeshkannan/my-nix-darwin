@@ -40,13 +40,12 @@
     
     call plug#begin('~/.vim/plugged')
     
-    Plug 'morhetz/gruvbox'
     Plug 'preservim/nerdtree'
     Plug 'ryanoasis/vim-devicons'
     Plug 'PhilRunninger/nerdtree-visual-selection'
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
-
+    Plug 'dracula/vim', { 'as': 'dracula' }
     
     let g:UltiSnipsExpandTrigger="<tab>"
     let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -100,20 +99,17 @@
 
     " COLOR SCHEME ----------------------------------------------------------- {{{
 
-    set background=light
-    hi Normal guibg=NONE ctermbg=NONE
+    set background=dark
 
-    " let g:everforest_background = 'hard'
-    " let g:everforest_better_performance = 1
-    " let g:everforest_transparent_background = 1
-    " let g:everforest_cursor = 'purple'
-    " let g:everforest_show_eob = '0'
     set t_Co=256
 
-    let g:gruvbox_italic=1
-    let g:gruvbox_transparent_bg=0
+    if v:version < 802
+      packadd! dracula
+    endif
+    syntax enable
 
-    colorscheme gruvbox 
+    colorscheme dracula
+    highlight Normal guibg=NONE ctermbg=NONE
 
     " }}}
 

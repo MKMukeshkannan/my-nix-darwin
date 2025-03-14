@@ -14,6 +14,10 @@
    '';
    programs.nixvim.keymaps = [
      {
+       action = "<cmd>:!command clang main.c -o main -g && ./main<CR>";
+       key = "<leader>cc";
+     }
+     {
        action = "<cmd>:!command cmake -S . -B build && cmake --build build<CR>";
        key = "<leader>c";
      }

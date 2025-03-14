@@ -48,12 +48,12 @@
   homebrew = { 
     enable = true;
     casks = [ "iina" "arc" "raycast" "obsidian" "postman" "wezterm" ];
-    brews = [ "node@22"  ];
+    brews = [ "node@22" "llvm"  ];
   };
 
   fonts.packages = [
-    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-      pkgs.meslo-lgs-nf
+    pkgs.jetbrains-mono
+    pkgs.meslo-lgs-nf
   ];
 
   users = {
@@ -96,13 +96,12 @@
     rm -rf /Applications/Nix\ Apps
     mkdir -p /Applications/Nix\ Apps
     find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
-    while read src; do
+    while read -r src; do
       app_name=$(basename "$src")
         echo "copying $src" >&2
         ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
         done '';
 
-  services.nix-daemon.enable = true;
   nix.settings.experimental-features = "nix-command flakes";
 
   programs.zsh.enable = true;  # default shell on catalina

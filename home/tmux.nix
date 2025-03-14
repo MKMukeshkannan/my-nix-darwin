@@ -33,7 +33,7 @@
       set-option -g detach-on-destroy off
 
 
-      set-option -g status-position bottom
+      set-option -g status-position top 
       set-option -g status-style bg=black,fg=white
       set-option -g automatic-rename on
        
