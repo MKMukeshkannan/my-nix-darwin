@@ -1,6 +1,6 @@
 {
     programs.kitty = {
-        enable = true;
+        enable = false;
         font = {
             name = "meslo-lgs-nf";
             size = 14.0;

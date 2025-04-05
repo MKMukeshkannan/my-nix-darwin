@@ -1,0 +1,21 @@
+# class
+snippet pmain
+	int main() {
+		int t; cin >> t;
+		while (t--) {
+			$0
+		};
+	};
+
+snippet nar
+	int n; cin >> n;
+	vector<int> arr(n, 0); for (auto &i: arr) cin >> i;
+
+snippet mnar
+	int n,m; cin >> n >> m;
+	vector<vector<int>> arr(n, 0); for (auto &i: arr) for (auto &j: i) cin >> i;
+
+snippet par
+	for (auto i: arr) 
+		cout << i << " ";
+	cout << endl;

@@ -15,6 +15,9 @@
             # nixd.enable = true;
             nil_ls.enable = true;
         };
+        # snippet = {
+        #   expand = "function(args) require('luasnip').lsp_expand(args.body) end";
+        # };
         keymaps = {
           silent = true;
           lspBuf = {
@@ -88,4 +91,6 @@
         '';
     };
     programs.nixvim.plugins.clangd-extensions.enable = true;
+    programs.nixvim.plugins.cmp-nvim-lsp.enable = true;
+
 }

@@ -2,11 +2,13 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = [ 
+    pkgs.ghc
+    pkgs.ghcid
     pkgs.ninja
     pkgs.gnumake
     pkgs.yabai
     pkgs.skhd
-    pkgs.kitty
+    # pkgs.kitty
     pkgs.mkalias
     pkgs.ripgrep
     pkgs.wget
@@ -14,6 +16,7 @@
     (import ./scripts/muxses.nix { inherit pkgs; })
     (import ./scripts/mcd.nix { inherit pkgs; })
     (import ./scripts/cses_folder.nix { inherit pkgs; })
+    (import ./scripts/pna.nix { inherit pkgs; })
 
     (pkgs.stdenv.mkDerivation {
       name = "nowplaying-cli";
@@ -48,7 +51,7 @@
   homebrew = { 
     enable = true;
     casks = [ "iina" "arc" "raycast" "obsidian" "postman" "wezterm" ];
-    brews = [ "node@22" "llvm"  ];
+    brews = [ "node@22" ];
   };
 
   fonts.packages = [
@@ -71,7 +74,7 @@
   system.defaults = {
     dock.autohide  = true;
     dock.persistent-apps = [
-      "${pkgs.kitty}/Applications/Kitty.app"
+      # "${pkgs.kitty}/Applications/Kitty.app"
       "${pkgs.obsidian}/Applications/Obsidian.app"
     ];
     finder.FXPreferredViewStyle = "clmv";

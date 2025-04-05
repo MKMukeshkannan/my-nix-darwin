@@ -4,10 +4,10 @@
     enableTelescope = true;
     excludedFiletypes = [ "harpoon" ];
     keymaps = {
-      addFile = "<leader>ha";
-      navNext = "<leader>hj";
-      navPrev = "<leader>hk";
-      toggleQuickMenu = "<leader>hh";
+      addFile = "<leader>a";
+      navNext = "<leader>j";
+      navPrev = "<leader>k";
+      toggleQuickMenu = "<leader>aa";
     };
   };
 }

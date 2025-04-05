@@ -10,7 +10,11 @@
         borderless_pickers = true,
         terminal_colors = true,
         cache = false,
+        highlights = {
+          Visual = { bg = "#84838A", fg = "black" },
+        },
       })
+
     '';
   };
 

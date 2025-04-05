@@ -3,7 +3,7 @@
   imports = [ 
     ./fastfetch.nix
     ./vim.nix
-    ./kitty.nix
+    # ./kitty.nix
     ./zsh.nix
     ./neovim
     ./tmux.nix
@@ -19,6 +19,16 @@
     userEmail = "mukeshkannan311@gmail.com";
   };
   programs.zoxide.enable = true;
+
+  programs = {
+    direnv = {
+      enable = true;
+      enableBashIntegration = true; 
+        nix-direnv.enable = true;
+    };
+
+    zsh.enable = true; 
+  };
 
   home.username = "mukeshkannan";
   home.homeDirectory = "/Users/mukeshkannan";

@@ -30,6 +30,8 @@
       bind -n C-Space run-shell "tmux neww muxses"
       bind -n C-x switch-client -l 
 
+      bind-key h split-window -p 20 "ghci Main.hs"
+      bind-key b split-window -p 20 "darwin-rebuild switch --flake .#mkmac --show-trace"
       set-option -g detach-on-destroy off
 
 

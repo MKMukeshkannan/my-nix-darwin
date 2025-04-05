@@ -7,9 +7,6 @@
         relativenumber = true; 
         number = true; 
 
-
-        background="light";
-
         modeline = true; 
         modelines = 100; 
 
@@ -29,7 +26,11 @@
         expandtab = true; 
         autoindent = true; 
         textwidth = 0; 
-
+#        guicursor = ''
+#          "n-v-c:block,i-ci-ve:hor20-Cursor,r-cr:hor20,o:hor50" .. 
+#          ",i-ci:hor20-blinkwait300-blinkon200-blinkoff150" .. 
+#          ",sm:block-blinkwait175-blinkon150-blinkoff175"
+#        '';
     };
     programs.nixvim = {
         enable = true;

@@ -1,0 +1,38 @@
+
+snippet pmain
+	public class Main {
+	    public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        int t = sc.nextInt();
+	        for (int i = 0; i < t; i++) {
+	            Solution solution = new Solution();
+	        }
+	    }
+	}
+
+
+snippet nar
+	int size = scanner.nextInt();
+	int[] arr = new int[size];
+	for (int i = 0; i < size; i++) {
+		arr[i] = scanner.nextInt();  
+	}
+
+snippet mnar
+	int rows = scanner.nextInt();
+	int columns = scanner.nextInt();
+	int[][] arr = new int[rows][columns];
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < columns; j++) {
+			arr[i][j] = scanner.nextInt();  
+		}
+	}
+
+snippet par
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < columns; j++) {
+			System.out.print(arr[i][j] + " ");  
+		}
+		System.out.println();  
+	}
+

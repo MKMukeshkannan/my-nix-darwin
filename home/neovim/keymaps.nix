@@ -14,7 +14,7 @@
    '';
    programs.nixvim.keymaps = [
      {
-       action = "<cmd>:!command clang main.c -o main -g && ./main<CR>";
+       action = "<cmd>:!command clang -std=c99 -Wall -Werror -fsanitize=address main.c -o main -g && ./main<CR>";
        key = "<leader>cc";
      }
      {
