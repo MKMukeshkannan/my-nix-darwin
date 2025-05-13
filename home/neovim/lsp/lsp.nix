@@ -12,8 +12,9 @@
               installRustc = true;
             };
             cmake.enable = true;
-            # nixd.enable = true;
+            nixd.enable = true;
             nil_ls.enable = true;
+            pyright.enable = true;
         };
         # snippet = {
         #   expand = "function(args) require('luasnip').lsp_expand(args.body) end";
@@ -92,5 +93,4 @@
     };
     programs.nixvim.plugins.clangd-extensions.enable = true;
     programs.nixvim.plugins.cmp-nvim-lsp.enable = true;
-
 }

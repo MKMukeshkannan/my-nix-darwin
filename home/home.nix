@@ -2,8 +2,6 @@
 {
   imports = [ 
     ./fastfetch.nix
-    ./vim.nix
-    # ./kitty.nix
     ./zsh.nix
     ./neovim
     ./tmux.nix
@@ -12,7 +10,7 @@
     inputs.nixvim.homeManagerModules.nixvim
   ];
 
-  home.packages = with pkgs; [ zsh tmuxinator zoxide lazygit yarn nodejs_22 fzf pngpaste yazi tidy-viewer ];
+  home.packages = with pkgs; [ zsh tmuxinator zoxide lazygit yarn nodejs_22 fzf pngpaste yazi tidy-viewer vim ];
   programs.git.enable = true;
   programs.git = {
     userName = "M K Mukesh Kannan";

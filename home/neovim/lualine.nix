@@ -19,37 +19,37 @@ local function lualine_colors()
     }
     return {
         normal = {
-            a = { bg = colors.red, fg = colors.black, gui = "bold" },
+            a = { bg = colors.transp, fg = colors.red, gui = "bold" },
             b = { bg = colors.lightgray, fg = colors.white },
             c = { bg = colors.transp, fg = colors.gray },
             z = { bg = colors.transp, fg = colors.red },
         },
         insert = {
-            a = { bg = colors.blue, fg = colors.black, gui = "bold" },
+            a = { bg = colors.transp, fg = colors.red, gui = "bold" },
             b = { bg = colors.lightgray, fg = colors.white },
             c = { bg = colors.transp, fg = colors.white },
             z = { bg = colors.transp, fg = colors.red },
         },
         visual = {
-            a = { bg = colors.yellow, fg = colors.black, gui = "bold" },
+            a = { bg = colors.transp, fg = colors.red, gui = "bold" },
             b = { bg = colors.lightgray, fg = colors.white },
             c = { bg = colors.transp, fg = colors.black },
             z = { bg = colors.transp, fg = colors.red },
         },
         replace = {
-            a = { bg = colors.green, fg = colors.black, gui = "bold" },
+            a = { bg = colors.transp, fg = colors.red, gui = "bold" },
             b = { bg = colors.lightgray, fg = colors.white },
             c = { bg = colors.transp, fg = colors.white },
             z = { bg = colors.transp, fg = colors.red },
         },
         command = {
-            a = { bg = colors.purple, fg = colors.white, gui = "bold" },
+            a = { bg = colors.transp, fg = colors.red, gui = "bold" },
             b = { bg = colors.lightgray, fg = colors.white },
             c = { bg = colors.transp, fg = colors.black },
             z = { bg = colors.transp, fg = colors.red },
         },
         inactive = {
-            a = { bg = colors.darkgray, fg = colors.gray, gui = "bold" },
+            a = { bg = colors.transp, fg = colors.red, gui = "bold" },
             b = { bg = colors.darkgray, fg = colors.gray },
             c = { bg = colors.transp, fg = colors.gray },
             z = { bg = colors.transp, fg = colors.red },
@@ -87,8 +87,8 @@ require("lualine").setup({
         theme = lualine_colors(),
     },
     sections = {
-        lualine_a = { "mode" },
-        lualine_b = { },
+        lualine_a = { 'filename' },
+        lualine_b = {},
         lualine_y = {},
         lualine_z = { get_scrollbar },
         lualine_c = {},

@@ -17,6 +17,7 @@
     ./align.nix
     ./harpoon.nix
     ./lualine.nix
+    ./hologram.nix
     # ./typr.nix
   ];
 

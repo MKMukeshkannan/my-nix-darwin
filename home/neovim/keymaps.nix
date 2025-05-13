@@ -22,6 +22,10 @@
        key = "<leader>c";
      }
      {
+       action = "<cmd>:!command cmake --preset conan-release && cmake --build ./build/Release/ && ./build/Release/src/machine_learning<CR>";
+       key = "<leader>C";
+     }
+     {
        action = "<cmd>:lua execute_cmake_out()<CR>";
        key = "<leader>r";
      }

@@ -47,7 +47,7 @@ def send_cpp_to_judge0(source_code, test_input, test_output):
 
 
 def send_to_judge0(source_code, test_input, test_output, language_id):
-    url = "https://850d-182-19-35-178.ngrok-free.app/submissions/?base64_encoded=true&wait=true"
+    url = "https://2b1b-115-245-169-114.ngrok-free.app/submissions/?base64_encoded=true&wait=true"
     
     encoded_source_code = base64.b64encode(source_code.encode()).decode()
     encoded_test_input = base64.b64encode(test_input.encode()).decode()
@@ -64,6 +64,7 @@ def send_to_judge0(source_code, test_input, test_output, language_id):
 
     if response.status_code == 201:
         result = response.json()
+        print(result)
         
         # Check for stderr first (decode from base64 if needed)
         if "stderr" in result and result["stderr"]:
